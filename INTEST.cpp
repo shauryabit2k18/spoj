@@ -4,21 +4,25 @@ using namespace std;
 
 int main()
 {
-    long int i , n , k , c = 0;
+    int i , t , m;
 
-    cin >> n >> k;
-    long int t[n];
-    for(i =0 ; i < n ; i++)
+    cin >> t;
+    while(t--)
     {
-       cin >> t[i];
-    }
-    for(i =0 ; i < n ; i++)
-    {
-       if(t[i] % k == 0)
-       {
-           c = c +1;
-       }
-    }
-    cout << c << endl;
+    	long long int o =0;
 
+        cin >> m;
+        int x = to_string(m).length();
+        int n[x];
+        for(i = 0 ; i < x ; i++)
+        {
+            n[i] = m%10;
+            m = m/10;
+        }
+        for(i = 0 ; i < x ; i++)
+        {
+            o = o + n[i];
+        }
+        cout << o << endl;
+    }
 }
